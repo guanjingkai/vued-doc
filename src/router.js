@@ -1,13 +1,12 @@
 /**
  * Created by aresn on 16/8/22.
  */
-const routers = [
-    {
+const routers = [{
         path: '/',
         meta: {
             title: ''
         },
-        component: (resolve) => require(['./views/index.vue'], resolve)
+        component: (resolve) => require(['./views/guide/layout.vue'], resolve)
     },
     {
         path: '/vue-book',
@@ -904,6 +903,69 @@ const routers = [
             title: 'AutoComplete'
         },
         component: (resolve) => require(['./views/components/auto-complete-en.vue'], resolve)
+    },
+    {
+        path: '/design/proximity',
+        meta: {
+            title: '亲密性 Proximity'
+        },
+        component: (resolve) => require(['./views/design/proximity.vue'], resolve)
+    },
+    {
+        path: '/design/alignment',
+        meta: {
+            title: '对齐 alignment'
+        },
+        component: (resolve) => require(['./views/design/alignment.vue'], resolve)
+    },
+    {
+        path: '/design/contrast',
+        meta: {
+            title: '对比 contrast'
+        },
+        component: (resolve) => require(['./views/design/contrast.vue'], resolve)
+    },
+    {
+        path: '/design/repetition',
+        meta: {
+            title: '重复 repetition'
+        },
+        component: (resolve) => require(['./views/design/repetition.vue'], resolve)
+    },
+    {
+        path: '/design/direct',
+        meta: {
+            title: '直截了当 direct'
+        },
+        component: (resolve) => require(['./views/design/direct.vue'], resolve)
+    },
+    {
+        path: '/design/stay',
+        meta: {
+            title: '足不出户 stay'
+        },
+        component: (resolve) => require(['./views/design/stay.vue'], resolve)
+    },
+    {
+        path: '/design/lightweight',
+        meta: {
+            title: '足不出户 lightweight'
+        },
+        component: (resolve) => require(['./views/design/lightweight.vue'], resolve)
+    },
+    {
+        path: '/design/invitation',
+        meta: {
+            title: '提供邀请 invitation'
+        },
+        component: (resolve) => require(['./views/design/invitation.vue'], resolve)
+    },
+    {
+        path: '/design/reaction',
+        meta: {
+            title: '即时反应 reaction'
+        },
+        component: (resolve) => require(['./views/design/reaction.vue'], resolve)
     },
     {
         path: '*',

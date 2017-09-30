@@ -1,16 +1,42 @@
 // 定义左侧导航
 
 const list = {
-    guide: [
-        {
+    guide: [{
             title: '介绍',
             titleEn: 'Introduction',
             path: '/docs/guide/introduce'
         },
         {
+            type: 'Design',
             title: '设计原则',
-            titleEn: 'Design Principles',
-            path: '/docs/guide/design'
+            list: [{
+                title: '亲密性',
+                path: '/design/proximity',
+            }, {
+                title: '对齐',
+                path: '/design/alignment',
+            }, {
+                title: '对比',
+                path: '/design/contrast',
+            }, {
+                title: '重复',
+                path: '/design/repetition',
+            }, {
+                title: '直截了当',
+                path: '/design/direct',
+            }, {
+                title: '足不出户',
+                path: '/design/stay',
+            }, {
+                title: '简化交互',
+                path: '/design/lightweight',
+            }, {
+                title: '提供邀请',
+                path: '/design/invitation',
+            }, {
+                title: '及时反映',
+                path: '/design/reaction',
+            }]
         },
         {
             title: '布局',
@@ -23,8 +49,7 @@ const list = {
             path: '/docs/guide/standard'
         }
     ],
-    beforeComponents: [
-        {
+    beforeComponents: [{
             title: '安装',
             titleEn: 'Installation',
             path: '/docs/guide/install'
@@ -60,12 +85,10 @@ const list = {
             path: '/docs/guide/update'
         }
     ],
-    components: [
-        {
+    components: [{
             type: 'Basic',
             title: '基础',
-            list: [
-                {
+            list: [{
                     title: 'Grid 栅格',
                     path: '/components/grid',
                     img: 'grid.png',
@@ -106,8 +129,7 @@ const list = {
         {
             type: 'Form',
             title: '表单',
-            list: [
-                {
+            list: [{
                     title: 'Input 输入框',
                     path: '/components/input',
                     img: 'input.png',
@@ -214,8 +236,7 @@ const list = {
         {
             type: 'View',
             title: '视图',
-            list: [
-                {
+            list: [{
                     title: 'Alert 警告提示',
                     path: '/components/alert',
                     img: 'alert.png',
@@ -310,8 +331,7 @@ const list = {
         {
             type: 'Navigation',
             title: '导航',
-            list: [
-                {
+            list: [{
                     title: 'Menu 导航菜单',
                     path: '/components/menu',
                     img: 'menu.png',
@@ -358,20 +378,17 @@ const list = {
         {
             type: 'Chart',
             title: '图表',
-            list: [
-                {
-                    title: 'Circle 进度环',
-                    path: '/components/circle',
-                    img: 'circle.png',
-                    icon: 'ios-circle-outline'
-                }
-            ]
+            list: [{
+                title: 'Circle 进度环',
+                path: '/components/circle',
+                img: 'circle.png',
+                icon: 'ios-circle-outline'
+            }]
         },
         {
             type: 'Other',
             title: '其它',
-            list: [
-                {
+            list: [{
                     title: 'Affix 图钉',
                     path: '/components/affix',
                     img: 'affix.png',
@@ -392,8 +409,7 @@ const list = {
             ]
         }
     ],
-    practice: [
-        {
+    practice: [{
             title: '实践案例',
             titleEn: 'Practical Cases',
             path: '/docs/practice/case'
@@ -404,12 +420,10 @@ const list = {
             path: '/docs/practice/logo'
         }
     ],
-    live: [
-        {
-            title: '最新课程',
-            path: '/live'
-        }
-    ]
+    live: [{
+        title: '最新课程',
+        path: '/live'
+    }]
 };
 
 export default list;

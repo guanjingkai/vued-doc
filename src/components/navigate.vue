@@ -9,10 +9,21 @@
             <!--</div>-->
         <!--</div>-->
         <Menu width="auto" :active-name="activeKey" @on-select="handleSelect" v-if="type === 'guide'">
-            <Menu-item v-for="item in navigate.guide" :key="item.path" :name="item.path">
+            <Menu-item v-if="item.path != null" v-for="item in navigate.guide" :key="item" :name="item.path">
                 <template v-if="lang === 'zh-CN'">{{ item.title }}</template>
                 <template v-else>{{ item.titleEn }}</template>
             </Menu-item>
+            <Submenu v-else :key="item" :name="item.type">
+                    <template slot="title"> 
+                        <template v-if="lang === 'zh-CN'">{{ item.title }}</template>
+                        <template v-else>{{ item.titleEn }}</template>
+                
+                    </template>
+                    <Menu-item v-for="item2 in item.list" :name="item2.path">
+                        <template v-if="lang === 'zh-CN'">{{ item2.title }}</template>
+                        <template v-else>{{ item.titleEn }}</template>
+                    </Menu-item>
+                </Submenu>
         </Menu>
         <Menu width="auto" :active-name="activeKey" @on-select="handleSelect" v-if="type === 'component'">
             <Menu-item v-for="item in navigate.beforeComponents" :key="item.path" :name="item.path">

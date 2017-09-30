@@ -5,7 +5,8 @@
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-function resolve (dir) {
+
+function resolve(dir) {
     return path.join(__dirname, '..', dir)
 }
 
@@ -21,35 +22,26 @@ module.exports = {
     },
     // 加载器
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.vue$/,
-                use: [
-                    {
-                        loader: 'vue-loader',
-                        options: {
-                            loaders: {
-                                less: ExtractTextPlugin.extract({
-                                    use: ['css-loader?minimize', 'autoprefixer-loader', 'less-loader'],
-                                    fallback: 'vue-style-loader'
-                                }),
-                                css: ExtractTextPlugin.extract({
-                                    use: ['css-loader?minimize', 'autoprefixer-loader', 'less-loader'],
-                                    fallback: 'vue-style-loader'
-                                }),
-                            },
-                            postLoaders: {
-                                html: 'babel-loader'
-                            }
-                        }
-                    },
-                    {
-                        loader: 'iview-loader',
-                        options: {
-                            prefix: false
+                use: [{
+                    loader: 'vue-loader',
+                    options: {
+                        loaders: {
+                            less: ExtractTextPlugin.extract({
+                                use: ['css-loader?minimize', 'autoprefixer-loader', 'less-loader'],
+                                fallback: 'vue-style-loader'
+                            }),
+                            css: ExtractTextPlugin.extract({
+                                use: ['css-loader?minimize', 'autoprefixer-loader', 'less-loader'],
+                                fallback: 'vue-style-loader'
+                            }),
+                        },
+                        postLoaders: {
+                            html: 'babel-loader'
                         }
                     }
-                ]
+                }]
             },
             {
                 test: /iview\/.*?js$/,
@@ -99,7 +91,7 @@ module.exports = {
             'iCode': '../../components/code.vue',
             // 'vue': 'vue/dist/vue.esm.js',
             'vue': 'vue/dist/vue.runtime.js'
-            // '@': resolve('src')
+                // '@': resolve('src')
         }
     }
 };
